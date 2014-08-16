@@ -1,6 +1,7 @@
 #Directories to ignore
 node_modules/
-_site
+_site/
+.sass-cache/
 
 #Files to ignore
 npm-debug.log
