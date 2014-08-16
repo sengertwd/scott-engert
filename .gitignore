@@ -1,5 +1,6 @@
 #Directories to ignore
 node_modules/
+_site
 
 #Files to ignore
 npm-debug.log

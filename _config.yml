@@ -1,0 +1,13 @@
+# Site settings
+title: Scott Engert
+email: sengert15@gmail.com
+timezone: America/Los_Angeles
+url: "http://www.scottengert.com"
+
+highlighter: pygments
+permalink: /blog/:title/
+
+exclude: ["node_modules/","gruntfile.js", "README.md", "package.json"]
+
+twitter_username: scott_engert
+github_username: senertwd
