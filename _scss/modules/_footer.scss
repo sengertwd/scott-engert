@@ -1,0 +1,8 @@
+footer {
+  section {
+    @include span(4 of 12);
+    &:last-of-type {
+      @include last;
+    }
+  }
+}

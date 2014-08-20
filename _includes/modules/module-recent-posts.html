@@ -1,0 +1,30 @@
+<section class="contain-home-posts">
+
+  <section class="featured-posts">
+
+    {% for post in site.categories.featured limit: 1 %}
+
+      <article class="post featured-post">
+        <h1>{{post.title}}</h1>
+        <time datetime="{{ post.date | date: '%Y-%m-%d'}}">{{ post.date | date: '%b %d, %Y' }}</time>
+      </article>
+
+    {% endfor %}
+    
+  </section>
+
+
+  <section class="recent-posts">
+
+    {% for post in site.posts limit:2 %}
+
+      <article class="post recent-post">
+        <h1>{{ post.title }}</h1>
+        <time datetime="{{ post.date | date: '%Y-%m-%d'}}">{{ post.date | date: '%b %d, %Y' }}</time>
+      </article>
+
+    {% endfor %}
+    
+  </section>
+  
+</section>

@@ -1,0 +1,12 @@
+.contain-home-posts {
+  @include container;
+
+  .featured-posts {
+    @include span(8 of 12);
+  }
+
+  .recent-posts {
+    @include span(4 of 12);
+    @include last;
+  }
+}

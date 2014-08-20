@@ -12,6 +12,11 @@ module.exports = function(grunt) {
     //     dest: 'build/<%= pkg.name %>.min.js'
     //   }
     // },
+    shell: {
+      jbuild: {
+        command: 'jekyll build'
+      }
+    },
     sass: {
       dist: {
         options: {
@@ -34,16 +39,23 @@ module.exports = function(grunt) {
     },
     cssmin:{
       files: {
-        'css/main.min.css': ['css/main.css']
+        'css/main.min.css': 'css/main.css'
       }
     },
     watch: {
+      options: {
+        debounceDelay: 100
+      },
       css: {
         files: '_scss/**/*.scss',
-        tasks: ['sass','autoprefixer','cssmin'],
+        tasks: ['sass','autoprefixer'],
         options: {
           livereload: false
         }
+      },
+      jekyll: {
+        files: ['css/**/*.css', '_includes/**/*.*','_layouts/**/*.*','_posts/**/*.*'],
+        tasks: ['shell:jbuild']
       }
     }
   });
@@ -54,6 +66,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-shell');
 
   // Default task(s).
   grunt.registerTask('default', ['watch']);

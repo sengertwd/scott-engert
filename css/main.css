@@ -1,0 +1,119 @@
+.wrapper {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1920px;
+}
+.wrapper:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/*--------------*\
+  0. Variables
+\*--------------*/
+/*--------------------*\
+  1. Resets
+\*--------------------*/
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*--------------------*\
+  2. Font Declarations
+\*--------------------*/
+/* latin */
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Source Code Pro Light"), local("SourceCodePro-Light"), url(http://fonts.gstatic.com/s/sourcecodepro/v5/leqv3v-yTsJNC7nFznSMqeode0-EuMkY--TSyExeINg.woff2) format("woff2"), url(http://fonts.gstatic.com/s/sourcecodepro/v5/leqv3v-yTsJNC7nFznSMqdbE_oMaV8t2eFeISPpzbdE.woff) format("woff");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin */
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Source Code Pro"), local("SourceCodePro-Regular"), url(http://fonts.gstatic.com/s/sourcecodepro/v5/mrl8jkM18OlOQN8JLgasD9V_2ngZ8dMf8fLgjYEouxg.woff2) format("woff2"), url(http://fonts.gstatic.com/s/sourcecodepro/v5/mrl8jkM18OlOQN8JLgasDxM0YzuT7MdOe03otPbuUS0.woff) format("woff");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin */
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Source Code Pro Bold"), local("SourceCodePro-Bold"), url(http://fonts.gstatic.com/s/sourcecodepro/v5/leqv3v-yTsJNC7nFznSMqUo0As1BFRXtCDhS66znb_k.woff2) format("woff2"), url(http://fonts.gstatic.com/s/sourcecodepro/v5/leqv3v-yTsJNC7nFznSMqVkQc6VGVFSmCnC_l7QZG60.woff) format("woff");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+body {
+  font-family: sans-serif;
+}
+
+code {
+  font-family: "Source Code Pro", monospace;
+}
+
+header.main-header {
+  width: 100%;
+}
+header.main-header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+header.main-header a {
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  color: #000;
+  padding: .5em 1em;
+}
+header.main-header a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+header.main-header li {
+  border-bottom: 1px solid #000;
+}
+header.main-header li:first-of-type {
+  border-top: 1px solid #000;
+}
+
+.hero-main-module {
+  text-align: center;
+}
+
+.contain-home-posts {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contain-home-posts:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.contain-home-posts .featured-posts {
+  width: 66.10169%;
+  float: left;
+  margin-right: 1.69492%;
+}
+.contain-home-posts .recent-posts {
+  width: 32.20339%;
+  float: left;
+  margin-right: 1.69492%;
+  float: right;
+  margin-right: 0;
+}
+
+footer section {
+  width: 32.20339%;
+  float: left;
+  margin-right: 1.69492%;
+}
+footer section:last-of-type {
+  float: right;
+  margin-right: 0;
+}
