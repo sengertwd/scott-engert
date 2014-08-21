@@ -43,18 +43,19 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-      options: {
-        debounceDelay: 100
-      },
+      // options: {
+      //   debounceDelay: 100
+      // },
       css: {
         files: '_scss/**/*.scss',
-        tasks: ['sass','autoprefixer'],
+        tasks: ['sass','autoprefixer','shell:jbuild'],
         options: {
-          livereload: false
+          livereload: false,
+          debounceDelay: 100
         }
       },
       jekyll: {
-        files: ['css/**/*.css', '_includes/**/*.*','_layouts/**/*.*','_posts/**/*.*'],
+        files: ['_includes/**/*.*','_layouts/**/*.*','_posts/**/*.*'],
         tasks: ['shell:jbuild']
       }
     }

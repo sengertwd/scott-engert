@@ -1,8 +1,25 @@
 footer {
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    a {
+      text-decoration: none;
+    }
+  }
   section {
-    @include span(4 of 12);
+    // @include span(4 of 12);
+    // &:last-of-type {
+    //   @include last;
+    // }
+  }
+
+  .footer-nav {
+    border-bottom: 1px solid #000;
+
     &:last-of-type {
-      @include last;
+      border-bottom: none;
     }
   }
 }

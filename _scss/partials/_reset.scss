@@ -1,5 +1,9 @@
 // The Basic Resets for the site
 
+* {
+  box-sizing: border-box;
+}
+
 %body {
   margin: 0;
   padding: 0;
