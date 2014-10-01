@@ -1,44 +1,106 @@
-header.main-header {
-  width: 100%;
+.site-header {
+  background-color: $c-header-bg;
+  color: $c-header-text;
 
-  div.logo {
-    @include span(2 of 12);
+  .logo {
+    font-size: 2rem;
   }
 
-  nav {
-    @include span(10 of 12);
-    @include last;
-    font-family: "Lato";
-    font-size: 1.5rem;
-    font-weight: 300;
-    text-transform: uppercase;
+  &:after {
+    clear: both;
+    content: '';
+    display: block;
   }
 
-  ul {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
+}
 
-  li {
-    flex: 1;
-    display: inline-block;
-    text-align: center;
-  }
-
+.main-nav {
   a {
-    color: #000;
-    display: inline-block;
-    padding: .5em 1em;
     text-decoration: none;
-    transition-duration: 0.2s;
-    transition-property: background-color;
-    transition-timing-function: ease-out;
-    width: 100%;
-    &:hover {
-      background-color: rgba(0,0,0,.2);
+    color: $c-header-text;
+    font-size: 1.2rem;
+    line-height: 3rem;
+  }
+
+  &-top {
+    float: left;
+    padding-left: 1rem;
+  }
+
+  &-bottom {
+    float: right;
+    padding-right: 1rem;
+    ul:after {
+      clear: both;
+      content: '';
+      display: block;
+    }
+    li {
+      float: left;
+      margin: 0 .5rem;
+    }
+  }
+}
+
+.logo {
+  font-family: "Thirsty Script";
+  font-weight: lighter;
+}
+
+@media screen and (max-width: 30em) {
+  .main-nav {
+    &-top,
+    &-bottom {
+      float: none;
+      padding: 0;
+      position: relative;
+      width: 100%;
+    }
+
+    &-top {
+      background-color: $c-header-bg;
+      padding: 0 1rem;
+      z-index: 1;
+
+      &:after {
+        clear: both;
+        content: '';
+        display: block;
+      }
+    }
+
+    &-bottom {
+      box-shadow: 0 0 8px rgba(0,0,0,.4);
+      max-height: 0;
+      overflow: hidden;
+      transition-duration: .3s;
+      transition-property: max-height;
+      transition-timing-function: cubic-bezier(.2,-0.3,.8,1.3);
+      z-index: 0;
+
+      &.open {
+        max-height: 250px;
+      }
+      li {
+        float: none;
+        margin: 0;
+        width: 100%;
+      }
+      a {
+        padding: 1rem;
+        line-height: 1.5;
+        border-top: 1px solid $c-boulder;
+        display: block;
+        background-color: $c-header-sec-bg;
+      }
     }
   }
 
+  .logo {
+    float: left;
+  }
+
+  .mobile-nav {
+    float: right;
+  }
 }

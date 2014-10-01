@@ -1,13 +1,18 @@
 {
-  "name": "scott-engert-com",
+  "name": "simple-jekyll-site",
   "version": "0.1.0",
+  "description": "",
+  "author": "Scott Engert <me@scottengert.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sengertwd/simple-jekyll-site"
+  },
   "devDependencies": {
     "grunt": "~0.4.5",
-    "grunt-contrib-uglify": "~0.5.0",
-    "grunt-contrib-sass": "~0.7.4",
-    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-sass": "*",
     "grunt-contrib-cssmin": "*",
-    "grunt-contrib-htmlmin": "*",
+    "grunt-contrib-uglify": "*",
     "grunt-autoprefixer": "*",
     "grunt-shell": "*"
   }

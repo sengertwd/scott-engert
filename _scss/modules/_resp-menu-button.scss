@@ -1,0 +1,41 @@
+.mobile-nav {
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  //
+
+  .bar {
+    height: 6px;
+    width: 30px;
+    background-color: $c-header-text;
+    margin-top: 6px;
+    border-radius: 5px;
+    transition-property: transform, opacity;
+    transition-duration: .3s;
+    transition-timing-function: linear;
+    transform-origin: center;
+
+    &:last-child {
+      margin-bottom: 6px;
+    }
+  }
+
+  &.open {
+    .bar1 {
+      transform: translateY(12px) rotateZ(225deg);
+    }
+    .bar2 {
+      opacity: 0;
+      transform: rotateZ(720deg);
+    }
+    .bar3 {
+      transform: translateY(-12px) rotateZ(-225deg);
+    }
+  }
+}
+@media screen and (min-width: 30em) {
+  .mobile-nav {
+    display: none;
+  }
+}
